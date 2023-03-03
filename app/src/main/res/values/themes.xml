@@ -1,0 +1,21 @@
+<resources>
+
+    <style name="Theme.BlueTV" parent="@style/Theme.Leanback" >
+        <item name="android:colorPrimary">#2a3eb1 </item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+    </style>
+    <style name="CustomExoMediaButton">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:scaleType">fitXY</item>
+
+    </style>
+
+    <style name="CustomExoMediaButton.Play">
+
+    </style>
+
+    <style name="CustomExoMediaButton.Pause">
+
+    </style>
+</resources>

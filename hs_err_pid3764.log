@@ -1,0 +1,174 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffddee11bb5, pid=3764, tid=660
+#
+# JRE version:  (11.0.11+9) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.11+9-b60-7590822, mixed mode, sharing, tiered, unknown gc, windows-amd64)
+# Problematic frame:
+# C  [jimage.dll+0x1bb5]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: 
+
+Host: AMD FX-8320E Eight-Core Processor              , 8 cores, 7G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1889)
+Time: Wed Sep 28 22:47:22 2022 Hora est. Pacífico, Sudamérica elapsed time: 0.010577 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread is native thread
+
+Stack: [0x000000fcb7300000,0x000000fcb7400000],  sp=0x000000fcb73fde30,  free space=1015k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [jimage.dll+0x1bb5]
+
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), reading address 0x0000000000002cfc
+
+
+Registers:
+RAX=0x0000000000000b38, RBX=0x000000fcb73fdf21, RCX=0x00007ffddee16000, RDX=0x0000000000000b38
+RSP=0x000000fcb73fde30, RBP=0x000000fcb73fdf20, RSI=0x000000000000810e, RDI=0x000000fcb73fdf20
+R8 =0x00007ffddee14278, R9 =0x000000000000001c, R10=0x00007ffda80e7900, R11=0x00007ffddee16000
+R12=0x0000000000000000, R13=0x0000023d60506a60, R14=0x000000fcb73fefb8, R15=0x00007ffda80e7998
+RIP=0x00007ffddee11bb5, EFLAGS=0x0000000000010212
+
+Top of Stack: (sp=0x000000fcb73fde30)
+0x000000fcb73fde30:   0000000000000050 0000023d60600cc0
+0x000000fcb73fde40:   0000000000000001 0000000000000008
+0x000000fcb73fde50:   0000023d605fe070 00007ffddee11d4f
+0x000000fcb73fde60:   000000000000000b 0000023d605fe070
+0x000000fcb73fde70:   0000023d60500000 000000fcb73fdf39
+0x000000fcb73fde80:   0000000000000005 00007ffde5dfb3c7
+0x000000fcb73fde90:   0000023d60600000 00007ffd00000000
+0x000000fcb73fdea0:   0000000000000040 00007ffd00000008
+0x000000fcb73fdeb0:   0000000000000000 0000000000000000
+0x000000fcb73fdec0:   00007c77562d835b 00007ffde37b24fc
+0x000000fcb73fded0:   00007ffda80c4648 0000000000000017
+0x000000fcb73fdee0:   0000023d605fe070 000000fcb73fefb8
+0x000000fcb73fdef0:   000000000000000b 00007ffddee12729
+0x000000fcb73fdf00:   0000000000000000 000000fcb73fe3c8
+0x000000fcb73fdf10:   0000000000000000 00007ffde5e20800
+0x000000fcb73fdf20:   61622e6176616a2f 692f6b646a2f6573 
+
+Instructions: (pc=0x00007ffddee11bb5)
+0x00007ffddee11ab5:   40 e9 91 22 00 00 cc 40 53 48 83 ec 20 48 8b d9
+0x00007ffddee11ac5:   48 8b 49 48 48 85 c9 74 1d 80 3d 3b 45 00 00 00
+0x00007ffddee11ad5:   74 06 48 8b 53 18 eb 04 48 8b 53 40 e8 2e 10 00
+0x00007ffddee11ae5:   00 48 83 63 48 00 8b 4b 0c 83 f9 ff 74 09 e8 64
+0x00007ffddee11af5:   0e 00 00 83 4b 0c ff 48 83 c4 20 5b c3 cc cc 40
+0x00007ffddee11b05:   53 48 83 ec 20 48 8b d9 48 8d 0d 0c 47 00 00 e8
+0x00007ffddee11b15:   4b 0e 00 00 83 6b 08 01 75 24 48 8b d3 48 8d 0d
+0x00007ffddee11b25:   ef 44 00 00 e8 3a 09 00 00 48 8b cb e8 0a ff ff
+0x00007ffddee11b35:   ff ba 78 00 00 00 48 8b cb e8 49 10 00 00 48 8d
+0x00007ffddee11b45:   0d d6 46 00 00 48 83 c4 20 5b e9 18 0e 00 00 48
+0x00007ffddee11b55:   89 5c 24 08 48 89 74 24 10 57 48 83 ec 20 41 8b
+0x00007ffddee11b65:   f1 4d 8b c8 48 8b fa 4c 8b d9 4d 85 c0 0f 84 83
+0x00007ffddee11b75:   00 00 00 85 f6 74 7f 44 8a 12 48 8d 5a 01 48 8b
+0x00007ffddee11b85:   d3 b8 93 01 00 01 eb 12 69 c0 93 01 00 01 41 0f
+0x00007ffddee11b95:   b6 ca 44 8a 12 33 c1 48 ff c2 45 84 d2 75 e9 4d
+0x00007ffddee11ba5:   8b 03 0f ba f0 1f 33 d2 49 8b cb f7 f6 48 63 c2
+0x00007ffddee11bb5:   41 8b 14 81 41 ff 50 08 44 8b c0 85 c0 7e 2a 8a
+0x00007ffddee11bc5:   07 eb 12 45 69 c0 93 01 00 01 0f b6 c8 8a 03 44
+0x00007ffddee11bd5:   33 c1 48 ff c3 84 c0 75 ea 41 0f ba f0 1f 33 d2
+0x00007ffddee11be5:   41 8b c0 f7 f6 8b c2 eb 10 83 c8 ff 45 85 c0 79
+0x00007ffddee11bf5:   08 41 2b c0 eb 03 83 c8 ff 48 8b 5c 24 30 48 8b
+0x00007ffddee11c05:   74 24 38 48 83 c4 20 5f c3 cc cc 48 89 5c 24 08
+0x00007ffddee11c15:   48 89 74 24 10 57 48 83 ec 20 48 8b f1 48 8d 0d
+0x00007ffddee11c25:   f7 45 00 00 e8 36 0d 00 00 33 ff 39 3d e2 43 00
+0x00007ffddee11c35:   00 76 24 48 8b 05 e1 43 00 00 48 8b d6 48 8b 1c
+0x00007ffddee11c45:   f8 48 8b 0b e8 22 21 00 00 85 c0 74 2b ff c7 3b
+0x00007ffddee11c55:   3d be 43 00 00 72 dc 33 db 48 8d 0d bb 45 00 00
+0x00007ffddee11c65:   e8 02 0d 00 00 48 8b 74 24 38 48 8b c3 48 8b 5c
+0x00007ffddee11c75:   24 30 48 83 c4 20 5f c3 ff 43 08 eb dc cc cc 48
+0x00007ffddee11c85:   89 5c 24 08 48 89 74 24 10 57 48 83 ec 20 48 8b
+0x00007ffddee11c95:   d9 48 8b f2 48 8b 49 10 49 8b f8 8b 53 30 48 8b
+0x00007ffddee11ca5:   01 ff 50 20 4c 8b 43 50 48 8b d6 48 8b 4b 10 44 
+
+
+
+---------------  P R O C E S S  ---------------
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+
+Dynamic libraries:
+0x00007ff688070000 - 0x00007ff68807a000 	C:\Program Files\Android\Android Studio\jre\bin\java.exe
+0x00007ffde5dd0000 - 0x00007ffde5fc8000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffde48c0000 - 0x00007ffde497d000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffde3940000 - 0x00007ffde3c0e000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffde37a0000 - 0x00007ffde38a0000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffddbdf0000 - 0x00007ffddbe09000 	C:\Program Files\Android\Android Studio\jre\bin\jli.dll
+0x00007ffddbcf0000 - 0x00007ffddbd07000 	C:\Program Files\Android\Android Studio\jre\bin\VCRUNTIME140.dll
+0x00007ffde4440000 - 0x00007ffde45e0000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffde34f0000 - 0x00007ffde3512000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffdd80f0000 - 0x00007ffdd838a000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffde5010000 - 0x00007ffde503a000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffde3690000 - 0x00007ffde379b000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffde4b40000 - 0x00007ffde4bde000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffde38a0000 - 0x00007ffde393d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffde4e30000 - 0x00007ffde4e60000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffdc3170000 - 0x00007ffdc320d000 	C:\Program Files\Android\Android Studio\jre\bin\msvcp140.dll
+0x00007ffda78e0000 - 0x00007ffda83b5000 	C:\Program Files\Android\Android Studio\jre\bin\server\jvm.dll
+0x00007ffde4250000 - 0x00007ffde42fe000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffde5050000 - 0x00007ffde50ec000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffde4980000 - 0x00007ffde4aa5000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffde5040000 - 0x00007ffde5048000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffddde30000 - 0x00007ffddde3a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffdd5760000 - 0x00007ffdd5787000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffde0d30000 - 0x00007ffde0d39000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffde43d0000 - 0x00007ffde443b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffde1400000 - 0x00007ffde1412000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffddc620000 - 0x00007ffddc631000 	C:\Program Files\Android\Android Studio\jre\bin\verify.dll
+0x00007ffdcfae0000 - 0x00007ffdcfcc4000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffdcfa00000 - 0x00007ffdcfa2c000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffde3c10000 - 0x00007ffde3c92000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffddc5f0000 - 0x00007ffddc619000 	C:\Program Files\Android\Android Studio\jre\bin\java.dll
+0x00007ffddee10000 - 0x00007ffddee1b000 	C:\Program Files\Android\Android Studio\jre\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Android\Android Studio\jre\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Program Files\Android\Android Studio\jre\bin\server
+
+VM Arguments:
+java_command: <unknown>
+java_class_path (initial): <not set>
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\David\AppData\Local\Microsoft\WindowsApps;C:\Users\JULIETH\AppData\Local\GitHubDesktop\bin;C:\Users\JULIETH\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\JULIETH\AppData\Roaming\npm
+USERNAME=JULIETH
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 21 Model 2 Stepping 0, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.1889)
+OS uptime: 4 days 23:23 hours
+
+CPU:total 8 (initial active 0) 
+
+Memory: 4k page, system-wide physical 8168M (1144M free)
+TotalPageFile size 8184M (AvailPageFile size 5M)
+current process WorkingSet (physical memory assigned to process): 7M, peak: 7M
+current process commit charge ("private bytes"): 3M, peak: 3M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.11+9-b60-7590822) for windows-amd64 JRE (11.0.11+9-b60-7590822), built on Jul 29 2021 21:43:44 by "builder" with MS VC++ 14.0 (VS2015)
+
+END.
