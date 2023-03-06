@@ -16,7 +16,7 @@ object RemoteConnectionChannels {
 
 
     private val builderChannel = Retrofit.Builder()
-        .baseUrl("http://4snntwsk29.execute-api.us'east-1.amazonaws.com/")
+        .baseUrl("https://4snntwsk29.execute-api.us-east-1.amazonaws.com/")
         .client(okHttpClient)
         .addConverterFactory(GsonConverterFactory.create())
         .build()

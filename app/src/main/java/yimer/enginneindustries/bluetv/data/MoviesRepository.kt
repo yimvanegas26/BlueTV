@@ -34,12 +34,12 @@ class MoviesRepository(private val apiKey:String) {
             when(category.id){
                 "4","5","6","7","8","9","10","11"->RemoteConnectionChannels
                     .services
-                    .channelsTv(apiKey, category.id, )
-                    .resultsChannel.map { it.toChannels() }
+                    .channelsTv()
+                    .map { it.toChannels() }
                 else ->       RemoteConnectionChannels
                     .services
-                    .channelsTv(apiKey, category.id)
-                    .resultsChannel.map { it.toChannels() }
+                    .channelsTv()
+                    .map { it.toChannels() }
 
             }
         }

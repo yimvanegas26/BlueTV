@@ -28,9 +28,6 @@ data class ResultChannels (
         category,
         url
 
-
-
-
     )
 
 }

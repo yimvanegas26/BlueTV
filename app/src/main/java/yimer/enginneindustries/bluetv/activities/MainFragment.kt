@@ -73,17 +73,5 @@ class MainFragment: BrowseSupportFragment() {
 
      }
 
-
-
-
-
-
-
-
     }
-
-
-
-
-
 

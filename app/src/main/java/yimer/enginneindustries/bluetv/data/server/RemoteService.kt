@@ -25,8 +25,8 @@ interface RemoteService {
         @Query("with_original_language") with_original_language: String = "es",
         ): RemoteResult
 
-    @GET("/api/user")
-    suspend fun channelsTv(searchQuery: String, id: String): RemoteChannelsResult
+    @GET("api/channels")
+    suspend fun channelsTv(): List<ResultChannels>
 
 
 
