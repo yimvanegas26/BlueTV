@@ -5,6 +5,7 @@ import androidx.leanback.widget.BaseCardView
 import androidx.leanback.widget.ImageCardView
 import androidx.leanback.widget.Presenter
 import yimer.enginneindustries.bluetv.domain.Movie
+import yimer.enginneindustries.bluetv.domain.Channels
 import yimer.enginneindustries.bluetv.iu.common.loadUrl
 
 class CardPresenter: Presenter() {
@@ -21,16 +22,22 @@ class CardPresenter: Presenter() {
         return ViewHolder(cardView)
     }
 
+    // override fun onBindViewHolder(viewHolder: ViewHolder, item: Any?) {
+    //     val movie = item as Movie
+    //     with(viewHolder.view as ImageCardView) {
+    //         titleText = movie.title
+    //         contentText = movie.releaseDate
+    //         mainImageView.loadUrl(movie.poster)
+    //     }     
+    // }
+
     override fun onBindViewHolder(viewHolder: ViewHolder, item: Any?) {
-        val movie = item as Movie
+        val channel = item as Channels
         with(viewHolder.view as ImageCardView) {
-            titleText = movie.title
-            contentText = movie.releaseDate
-            mainImageView.loadUrl(movie.poster)
-        }
-       
-
-
+            titleText = channel.name
+            contentText = channel.description
+            mainImageView.loadUrl(channel.urlImage)
+        }     
     }
 
     override fun onUnbindViewHolder(viewHolder: ViewHolder) {

@@ -28,7 +28,7 @@ class MainFragment: BrowseSupportFragment() {
         title = getString(R.string.browse)
         moviesRepository = MoviesRepository(getString(R.string.api_key))
         viewLifecycleOwner.lifecycleScope.launch {
-            adapter = buildAdapter()
+            adapter = buildAdapterChannels()
             mainFragmentRegistry.registerFragment(PageRow::class.java, PageRowFragmentFactory())
 
 
@@ -62,6 +62,24 @@ class MainFragment: BrowseSupportFragment() {
            moviesRepository.getCategories().forEach { (category,movies) ->
                val listRowsAdapter = ArrayObjectAdapter(cardPresenter)
                listRowsAdapter.addAll(0, movies)
+
+               val header = HeaderItem(category.ordinal.toLong(),   category.name)
+               rowsAdapter.add(ListRow(header, listRowsAdapter))
+
+           }
+
+
+         return rowsAdapter
+
+     }
+
+        private suspend fun buildAdapterChannels():ArrayObjectAdapter {
+
+            val rowsAdapter = ArrayObjectAdapter(ListRowPresenter())
+            val cardPresenter = CardPresenter()
+           moviesRepository.getChannels().forEach { (category,channels) ->
+               val listRowsAdapter = ArrayObjectAdapter(cardPresenter)
+               listRowsAdapter.addAll(0, channels)
 
                val header = HeaderItem(category.ordinal.toLong(),   category.name)
                rowsAdapter.add(ListRow(header, listRowsAdapter))
